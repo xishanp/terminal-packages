@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "terminal",
+  "name": "Terminal Official",
+  "minimumClientVersion": "0.6.01Debug",
+  "androidSources": [
+    {
+      "id": "fdroid",
+      "name": "F-Droid",
+      "kind": "fdroid-index-v1",
+      "indexUrls": [
+        "https://f-droid.org/repo/index-v1.jar",
+        "https://mirror.cyberbits.eu/fdroid/repo/index-v1.jar",
+        "https://ftp.lysator.liu.se/pub/fdroid/repo/index-v1.jar"
+      ],
+      "certificateSha256": "43238D512C1E5EB2D6569F4A3AFBF5523418B82E0A3ED1552770ABB9A9C9CCAB"
+    },
+    {
+      "id": "izzy",
+      "name": "IzzyOnDroid",
+      "kind": "fdroid-index-v1",
+      "indexUrls": [
+        "https://apt.izzysoft.de/fdroid/repo/index-v1.jar"
+      ],
+      "certificateSha256": "3BF0D6ABFEAE2F401707B6D966BE743BF0EEE49C2561B9BA39073711F628937A"
+    },
+    {
+      "id": "github",
+      "name": "GitHub Releases",
+      "kind": "explicit-repository",
+      "note": "Repository-specific lookups only; GitHub has no trusted global Android package index."
+    }
+  ],
+  "tools": [
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "PSF-2.0",
+      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "MIT",
+      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "GPL-2.0-only",
+      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+    },
+    {
+      "id": "clang",
+      "name": "Clang",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "abis": ["arm64-v8a", "x86_64"]
+    },
+    {
+      "id": "cmake",
+      "name": "CMake",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "BSD-3-Clause",
+      "abis": ["arm64-v8a", "x86_64"]
+    },
+    {
+      "id": "ninja",
+      "name": "Ninja",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "Apache-2.0",
+      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+    },
+    {
+      "id": "make",
+      "name": "GNU Make",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "GPL-3.0-or-later",
+      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+    },
+    {
+      "id": "openjdk",
+      "name": "OpenJDK",
+      "category": "development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+      "abis": ["arm64-v8a", "x86_64"]
+    },
+    {
+      "id": "aapt2",
+      "name": "AAPT2",
+      "category": "android-development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "Apache-2.0",
+      "abis": ["arm64-v8a", "x86_64"]
+    },
+    {
+      "id": "apktool",
+      "name": "Apktool",
+      "category": "android-development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "Apache-2.0",
+      "abis": ["all"]
+    },
+    {
+      "id": "smali",
+      "name": "smali/baksmali",
+      "category": "android-development",
+      "artifactFormat": "terminal-split-apk",
+      "state": "building",
+      "license": "BSD-3-Clause",
+      "abis": ["all"]
+    }
+  ]
+}

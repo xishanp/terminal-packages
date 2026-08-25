@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/xishanp/terminal-packages/schema/catalog-v1.schema.json",
+  "title": "Terminal package catalogue v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "name", "minimumClientVersion", "androidSources", "tools"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "const": "terminal" },
+    "name": { "const": "Terminal Official" },
+    "minimumClientVersion": { "type": "string", "minLength": 1 },
+    "androidSources": { "type": "array", "minItems": 3 },
+    "tools": { "type": "array" }
+  },
+  "additionalProperties": false
+}
