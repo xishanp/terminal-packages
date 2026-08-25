@@ -53,4 +53,15 @@ for tool in catalog.get("tools", []):
             if not artifact.get("name", "").endswith(".apk"):
                 fail(f"{tool_id} contains a non-APK artifact")
 
-print(f"OK: {len(source_ids)} Android sources, {len(tool_ids)} native tools")
+app_ids = set()
+for app in catalog.get("androidDevelopmentApps", []):
+    package_id = app.get("packageId")
+    if not package_id or package_id in app_ids:
+        fail(f"invalid or duplicate development app id: {package_id!r}")
+    app_ids.add(package_id)
+    if not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z][A-Za-z0-9_]*)+", package_id):
+        fail(f"invalid Android package id: {package_id}")
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", app.get("repository", "")):
+        fail(f"{package_id} has an invalid GitHub repository")
+
+print(f"OK: {len(source_ids)} Android sources, {len(app_ids)} development apps, {len(tool_ids)} native tools")

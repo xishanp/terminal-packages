@@ -31,6 +31,43 @@
       "note": "Repository-specific lookups only; GitHub has no trusted global Android package index."
     }
   ],
+  "androidDevelopmentApps": [
+    {
+      "packageId": "com.foxdebug.acode",
+      "name": "Acode",
+      "provider": "fdroid-or-github-release",
+      "repository": "Acode-Foundation/Acode",
+      "license": "MIT"
+    },
+    {
+      "packageId": "io.github.muntashirakon.AppManager",
+      "name": "App Manager",
+      "provider": "fdroid-or-github-release",
+      "repository": "MuntashirAkon/AppManager",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "packageId": "moe.shizuku.privileged.api",
+      "name": "Shizuku",
+      "provider": "github-release",
+      "repository": "RikkaApps/Shizuku",
+      "license": "Apache-2.0"
+    },
+    {
+      "packageId": "com.termux",
+      "name": "Termux",
+      "provider": "fdroid-or-github-release",
+      "repository": "termux/termux-app",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "packageId": "com.aefyr.sai",
+      "name": "Split APKs Installer",
+      "provider": "fdroid-or-github-release",
+      "repository": "Aefyr/SAI",
+      "license": "GPL-3.0"
+    }
+  ],
   "tools": [
     {
       "id": "python",

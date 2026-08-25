@@ -17,6 +17,10 @@ download-and-execute ZIP archives. The initial catalogue tracks Python,
 Node.js, Git, Clang, CMake, Ninja, GNU Make, OpenJDK, AAPT2, Apktool and
 smali/baksmali.
 
+The curated Android development list initially includes Acode, App Manager,
+Shizuku, Termux and Split APKs Installer. Their APKs remain hosted and signed
+by their upstream projects; this repository records identity and routing only.
+
 ## Client commands
 
 ```sh
