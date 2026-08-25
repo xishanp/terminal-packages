@@ -36,6 +36,7 @@ apk install <package-or-file.apk>
 - `catalog-v1.json`: machine-readable source and tool catalogue.
 - `schema/catalog-v1.schema.json`: catalogue format.
 - `scripts/validate_catalog.py`: dependency-free validation used by CI.
+- `docs/module-apk-v1.md`: identity, signing and installation contract for tools.
 
 Entries with `state: building` are visible roadmap entries, not downloadable
 packages. Clients must never attempt to install them.
