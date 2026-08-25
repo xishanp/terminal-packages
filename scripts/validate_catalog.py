@@ -25,10 +25,15 @@ for source in catalog.get("androidSources", []):
         fail(f"invalid or duplicate source id: {source_id!r}")
     source_ids.add(source_id)
     if source.get("kind") == "fdroid-index-v1":
+        if not source.get("name"):
+            fail(f"{source_id} has no display name")
         fingerprint = source.get("certificateSha256", "")
         if not re.fullmatch(r"[0-9A-F]{64}", fingerprint):
             fail(f"{source_id} has no pinned SHA-256 certificate")
-        for value in source.get("indexUrls", []):
+        urls = source.get("indexUrls", [])
+        if not urls:
+            fail(f"{source_id} has no index URL")
+        for value in urls:
             if urlparse(value).scheme != "https":
                 fail(f"{source_id} contains a non-HTTPS URL")
 

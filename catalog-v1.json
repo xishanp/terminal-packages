@@ -25,6 +25,83 @@
       "certificateSha256": "3BF0D6ABFEAE2F401707B6D966BE743BF0EEE49C2561B9BA39073711F628937A"
     },
     {
+      "id": "microg",
+      "name": "MicroG",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://microg.org/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "9BD06727E62796C0130EB6DAB39B73157451582CBD138E86C468ACC395D14165"
+    },
+    {
+      "id": "newpipe",
+      "name": "NewPipe",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://archive.newpipe.net/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501"
+    },
+    {
+      "id": "kde",
+      "name": "KDE",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://cdn.kde.org/android/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "B3EBE10AFA6C5C400379B34473E843D686C61AE6AD33F423C98AF903F056523F"
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://mobileapp.bitwarden.com/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "BC54EA6FD1CD5175BCCCC47C561C5726E1C3ED7E686B6DB4B18BAC843A3EFE6C"
+    },
+    {
+      "id": "briar",
+      "name": "Briar",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://briarproject.org/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "1FB874BEE7276D28ECB2C9B06E8A122EC4BCB4008161436CE474C257CBF49BD6"
+    },
+    {
+      "id": "molly",
+      "name": "Molly",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://molly.im/fdroid/foss/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "5198DAEF37FC23C14D5EE32305B2AF45787BD7DF2034DE33AD302BDB3446DF74"
+    },
+    {
+      "id": "collabora",
+      "name": "Collabora Office",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://www.collaboraoffice.com/downloads/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "573258C84E149B5F4D9299E7434B2B69A8410372921D4AE586BA91EC767892CC"
+    },
+    {
+      "id": "calyx",
+      "name": "CalyxOS",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://calyxos.gitlab.io/calyx-fdroid-repo/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "C44D58B4547DE5096138CB0B34A1CC99DAB3B4274412ED753FCCBFC11DC1B7B6"
+    },
+    {
+      "id": "fedilab",
+      "name": "Fedilab",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://fdroid.fedilab.app/repo/index-v1.jar"],
+      "certificateSha256": "11F0A69910A4280E2CD3CCC3146337D006BE539B18E1A9FEACE15FF757A94FEB"
+    },
+    {
+      "id": "cryptomator",
+      "name": "Cryptomator",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://static.cryptomator.org/android/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "F7C3EC3B0D588D3CB52983E9EB1A7421C93D4339A286398E71D7B651E8D8ECDD"
+    },
+    {
+      "id": "simplex",
+      "name": "SimpleX",
+      "kind": "fdroid-index-v1",
+      "indexUrls": ["https://app.simplex.chat/fdroid/repo/index-v1.jar"],
+      "certificateSha256": "9F358FF284D1F71656A2BFAF0E005DEAE6AA14143720E089F11FF2DDCFEB01BA"
+    },
+    {
       "id": "github",
       "name": "GitHub Releases",
       "kind": "explicit-repository",
@@ -65,6 +142,41 @@
       "name": "Split APKs Installer",
       "provider": "fdroid-or-github-release",
       "repository": "Aefyr/SAI",
+      "license": "GPL-3.0"
+    },
+    {
+      "packageId": "com.maxistar.textpad",
+      "name": "TextPad",
+      "provider": "fdroid-or-github-release",
+      "repository": "maxistar/TextPad",
+      "license": "GPL-3.0"
+    },
+    {
+      "packageId": "dev.imranr.obtainium",
+      "name": "Obtainium",
+      "provider": "fdroid-or-github-release",
+      "repository": "ImranR98/Obtainium",
+      "license": "GPL-3.0"
+    },
+    {
+      "packageId": "com.termux.api",
+      "name": "Termux:API",
+      "provider": "fdroid-or-github-release",
+      "repository": "termux/termux-api",
+      "license": "GPL-3.0"
+    },
+    {
+      "packageId": "com.termux.widget",
+      "name": "Termux:Widget",
+      "provider": "fdroid-or-github-release",
+      "repository": "termux/termux-widget",
+      "license": "GPL-3.0"
+    },
+    {
+      "packageId": "org.cosmicide",
+      "name": "Cosmic IDE",
+      "provider": "github-release",
+      "repository": "aload0/Cosmic-IDE",
       "license": "GPL-3.0"
     }
   ],

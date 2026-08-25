@@ -17,9 +17,16 @@ download-and-execute ZIP archives. The initial catalogue tracks Python,
 Node.js, Git, Clang, CMake, Ninja, GNU Make, OpenJDK, AAPT2, Apktool and
 smali/baksmali.
 
-The curated Android development list initially includes Acode, App Manager,
-Shizuku, Termux and Split APKs Installer. Their APKs remain hosted and signed
-by their upstream projects; this repository records identity and routing only.
+The curated Android development list includes editors, IDEs, package inspection,
+release tracking, Shizuku, Termux and its API/Widget integrations. Their APKs
+remain hosted and signed by their upstream projects; this repository records
+identity and routing only.
+
+Terminal Official pins every repository certificate in the Android client.
+The catalogue includes F-Droid, IzzyOnDroid, MicroG, NewPipe, KDE, Bitwarden,
+Briar, Molly, Collabora Office, CalyxOS, Fedilab, Cryptomator and SimpleX. A
+remote catalogue may change HTTPS endpoints but cannot add a new trust anchor
+to an installed app.
 
 ## Client commands
 
