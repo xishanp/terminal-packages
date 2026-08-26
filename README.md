@@ -43,6 +43,7 @@ apk install <package-or-file.apk>
 - `catalog-v1.json`: machine-readable source and tool catalogue.
 - `schema/catalog-v1.schema.json`: catalogue format.
 - `scripts/validate_catalog.py`: dependency-free validation used by CI.
+- `scripts/build_python_tpkg.py`: deterministic Python standard-library package builder.
 - `docs/native-package-v1.md`: package, integrity and installation contract for tools.
 
 Entries with `state: building` are visible roadmap entries, not downloadable

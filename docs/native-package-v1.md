@@ -6,8 +6,8 @@ Termux packages, PRoot images or Linux distribution containers.
 Android 10-16 does not provide a portable contract for executing newly
 downloaded machine code from an app-writable directory. Therefore:
 
-- Android/Bionic machine code is delivered in a split APK signed exactly like
-  the installed `com.terminal` base APK.
+- Android/Bionic machine code is either bundled in the signed `com.terminal`
+  base APK or delivered in a split APK signed exactly like it.
 - Standard libraries, headers, scripts, certificates and other writable data
   are installed from a `.tpkg` into the private application prefix.
 - A `.tpkg` may contain executable text wrappers, but never executable machine
@@ -40,6 +40,7 @@ An available tool has one artifact for each supported Android ABI:
   "artifactFormat": "terminal-native-runtime-v1",
   "state": "available",
   "version": "3.x.y",
+  "codeDelivery": "bundled",
   "dependencies": [],
   "codeArtifacts": [
     {
@@ -66,6 +67,9 @@ An available tool has one artifact for each supported Android ABI:
 ```
 
 `building` entries are roadmap metadata and have no downloadable artifacts.
+`codeDelivery: bundled` means matching executable code must already exist in
+the installed base APK; `codeArtifacts` is then omitted. `module` delivery uses
+the signed APK artifacts shown above.
 Code APK installation uses PackageInstaller inherit-existing mode and retains
 Android's required user confirmation in NORMAL mode.
 

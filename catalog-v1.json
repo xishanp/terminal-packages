@@ -186,9 +186,30 @@
       "name": "Python",
       "category": "development",
       "artifactFormat": "terminal-native-runtime-v1",
-      "state": "building",
+      "state": "available",
+      "version": "3.13.0",
+      "codeDelivery": "bundled",
+      "dependencies": [],
+      "dataArtifacts": [
+        {
+          "abi": "arm64-v8a",
+          "minApi": 29,
+          "name": "python-3.13.0-arm64-v8a.tpkg",
+          "url": "https://github.com/xishanp/terminal-packages/releases/download/v1.4.0/python-3.13.0-arm64-v8a.tpkg",
+          "size": 4198557,
+          "sha256": "8b29149dcf59b8cd3c258a92cd6fe32cf440b2aa33d241f1d642b43b70007e47"
+        },
+        {
+          "abi": "x86_64",
+          "minApi": 29,
+          "name": "python-3.13.0-x86_64.tpkg",
+          "url": "https://github.com/xishanp/terminal-packages/releases/download/v1.4.0/python-3.13.0-x86_64.tpkg",
+          "size": 4198556,
+          "sha256": "a52b6f52e0072949c7e42f8bfacdcaf2ec4b6f7939d4c06e51b92d4435e2bc4b"
+        }
+      ],
       "license": "PSF-2.0",
-      "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
+      "abis": ["arm64-v8a", "x86_64"]
     },
     {
       "id": "nodejs",

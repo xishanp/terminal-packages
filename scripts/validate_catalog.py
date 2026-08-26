@@ -51,10 +51,15 @@ for tool in catalog.get("tools", []):
     if not tool.get("category") or not tool.get("abis"):
         fail(f"{tool_id} is missing category or ABI metadata")
     if state == "available":
-        for key in ("version", "codeArtifacts"):
+        for key in ("version",):
             if not tool.get(key):
                 fail(f"available tool {tool_id} is missing {key}")
-        for artifact in tool["codeArtifacts"]:
+        code_delivery = tool.get("codeDelivery", "module")
+        if code_delivery not in {"bundled", "module"}:
+            fail(f"{tool_id} has invalid codeDelivery: {code_delivery}")
+        if code_delivery == "module" and not tool.get("codeArtifacts"):
+            fail(f"available tool {tool_id} has no code artifacts")
+        for artifact in tool.get("codeArtifacts", []):
             if not artifact.get("name", "").endswith(".apk"):
                 fail(f"{tool_id} contains a non-APK code artifact")
             if artifact.get("abi") not in tool["abis"]:
