@@ -5,15 +5,15 @@ Official package catalogue for the native Android Terminal app.
 The repository has two responsibilities:
 
 - Describe trusted Android application sources without republishing their APKs.
-- Publish Terminal native tool modules built for a specific Android ABI.
+- Publish Terminal native tool packages built for a specific Android ABI.
 
 The app exposes this as one source named `Terminal Official`. F-Droid and
 IzzyOnDroid payloads continue to be verified with their upstream repository
-certificates. Native tool modules are published only after an APK with the
-same application signature as Terminal has been built and checksummed.
+certificates. Native tool packages are installed transactionally into
+Terminal's private `files/usr` prefix after their manifests and hashes pass.
 
-Development environments are distributed as Terminal module APKs, never as
-download-and-execute ZIP archives. The initial catalogue tracks Python,
+Development environments use signed Android/Bionic code modules plus verified
+`.tpkg` data archives, never Termux packages or Linux containers. The initial catalogue tracks Python,
 Node.js, Git, Clang, CMake, Ninja, GNU Make, OpenJDK, AAPT2, Apktool and
 smali/baksmali.
 
@@ -43,7 +43,7 @@ apk install <package-or-file.apk>
 - `catalog-v1.json`: machine-readable source and tool catalogue.
 - `schema/catalog-v1.schema.json`: catalogue format.
 - `scripts/validate_catalog.py`: dependency-free validation used by CI.
-- `docs/module-apk-v1.md`: identity, signing and installation contract for tools.
+- `docs/native-package-v1.md`: package, integrity and installation contract for tools.
 
 Entries with `state: building` are visible roadmap entries, not downloadable
 packages. Clients must never attempt to install them.

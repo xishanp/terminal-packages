@@ -46,17 +46,42 @@ for tool in catalog.get("tools", []):
     state = tool.get("state")
     if state not in {"building", "available"}:
         fail(f"{tool_id} has invalid state: {state!r}")
-    if tool.get("artifactFormat") != "terminal-split-apk":
-        fail(f"{tool_id} is not declared as a Terminal module APK")
+    if tool.get("artifactFormat") != "terminal-native-runtime-v1":
+        fail(f"{tool_id} is not declared as a Terminal native runtime")
     if not tool.get("category") or not tool.get("abis"):
         fail(f"{tool_id} is missing category or ABI metadata")
     if state == "available":
-        for key in ("version", "artifacts"):
+        for key in ("version", "codeArtifacts"):
             if not tool.get(key):
                 fail(f"available tool {tool_id} is missing {key}")
-        for artifact in tool["artifacts"]:
+        for artifact in tool["codeArtifacts"]:
             if not artifact.get("name", "").endswith(".apk"):
-                fail(f"{tool_id} contains a non-APK artifact")
+                fail(f"{tool_id} contains a non-APK code artifact")
+            if artifact.get("abi") not in tool["abis"]:
+                fail(f"{tool_id} artifact ABI is not declared by the package")
+            if not isinstance(artifact.get("minApi"), int) or artifact["minApi"] < 29:
+                fail(f"{tool_id} artifact has an invalid minApi")
+            if urlparse(artifact.get("url", "")).scheme != "https":
+                fail(f"{tool_id} artifact URL is not HTTPS")
+            if not isinstance(artifact.get("size"), int) or artifact["size"] <= 0:
+                fail(f"{tool_id} artifact has an invalid size")
+            if not re.fullmatch(r"[0-9a-f]{64}", artifact.get("sha256", "")):
+                fail(f"{tool_id} artifact has an invalid SHA-256")
+            if not re.fullmatch(r"[0-9A-F]{64}", artifact.get("signerSha256", "")):
+                fail(f"{tool_id} code artifact has an invalid signer SHA-256")
+        for artifact in tool.get("dataArtifacts", []):
+            if not artifact.get("name", "").endswith(".tpkg"):
+                fail(f"{tool_id} contains a non-tpkg data artifact")
+            if artifact.get("abi") not in tool["abis"]:
+                fail(f"{tool_id} data artifact ABI is not declared by the package")
+            if not isinstance(artifact.get("minApi"), int) or artifact["minApi"] < 29:
+                fail(f"{tool_id} data artifact has an invalid minApi")
+            if urlparse(artifact.get("url", "")).scheme != "https":
+                fail(f"{tool_id} data artifact URL is not HTTPS")
+            if not isinstance(artifact.get("size"), int) or artifact["size"] <= 0:
+                fail(f"{tool_id} data artifact has an invalid size")
+            if not re.fullmatch(r"[0-9a-f]{64}", artifact.get("sha256", "")):
+                fail(f"{tool_id} data artifact has an invalid SHA-256")
 
 app_ids = set()
 for app in catalog.get("androidDevelopmentApps", []):

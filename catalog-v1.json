@@ -185,7 +185,7 @@
       "id": "python",
       "name": "Python",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "PSF-2.0",
       "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
@@ -194,7 +194,7 @@
       "id": "nodejs",
       "name": "Node.js",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "MIT",
       "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
@@ -203,7 +203,7 @@
       "id": "git",
       "name": "Git",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "GPL-2.0-only",
       "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
@@ -212,7 +212,7 @@
       "id": "clang",
       "name": "Clang",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "Apache-2.0 WITH LLVM-exception",
       "abis": ["arm64-v8a", "x86_64"]
@@ -221,7 +221,7 @@
       "id": "cmake",
       "name": "CMake",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "BSD-3-Clause",
       "abis": ["arm64-v8a", "x86_64"]
@@ -230,7 +230,7 @@
       "id": "ninja",
       "name": "Ninja",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "Apache-2.0",
       "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
@@ -239,7 +239,7 @@
       "id": "make",
       "name": "GNU Make",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "GPL-3.0-or-later",
       "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"]
@@ -248,7 +248,7 @@
       "id": "openjdk",
       "name": "OpenJDK",
       "category": "development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "GPL-2.0-only WITH Classpath-exception-2.0",
       "abis": ["arm64-v8a", "x86_64"]
@@ -257,7 +257,7 @@
       "id": "aapt2",
       "name": "AAPT2",
       "category": "android-development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "Apache-2.0",
       "abis": ["arm64-v8a", "x86_64"]
@@ -266,7 +266,7 @@
       "id": "apktool",
       "name": "Apktool",
       "category": "android-development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "Apache-2.0",
       "abis": ["all"]
@@ -275,7 +275,7 @@
       "id": "smali",
       "name": "smali/baksmali",
       "category": "android-development",
-      "artifactFormat": "terminal-split-apk",
+      "artifactFormat": "terminal-native-runtime-v1",
       "state": "building",
       "license": "BSD-3-Clause",
       "abis": ["all"]
