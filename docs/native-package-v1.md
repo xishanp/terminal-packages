@@ -10,7 +10,8 @@ downloaded machine code from an app-writable directory. Therefore:
   the installed `com.terminal` base APK.
 - Standard libraries, headers, scripts, certificates and other writable data
   are installed from a `.tpkg` into the private application prefix.
-- A `.tpkg` must never contain executable machine code.
+- A `.tpkg` may contain executable text wrappers, but never executable machine
+  code. ELF payloads are rejected even when renamed.
 
 ## Runtime prefix
 
@@ -86,15 +87,16 @@ A `.tpkg` is a ZIP/Deflate container. It contains exactly one
       "path": "usr/bin/python3",
       "size": 123,
       "sha256": "lowercase_file_sha256",
-      "executable": false
+      "executable": true
     }
   ]
 }
 ```
 
 Paths must be normalized relative paths under `usr/`. Absolute paths, `..`,
-symlinks, devices, duplicate entries, executable payloads and undeclared files
-are rejected.
+symlinks, devices, duplicate entries, ELF payloads and undeclared files are
+rejected. An executable `usr/bin` entry is a text wrapper which launches the
+corresponding library executable from Android's read-only native library area.
 
 ## Installation transaction
 
@@ -111,4 +113,5 @@ are rejected.
 9. Remove only files owned by that package during uninstall.
 
 Native executables must be built for Android/Bionic and packaged in the signed
-code APK. Renamed Termux packages and binaries built for glibc are not accepted.
+code APK with extracted native libraries enabled. Renamed Termux packages and
+binaries built for glibc are not accepted.
